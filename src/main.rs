@@ -6,14 +6,14 @@ use anyhow::{anyhow, Error, Result};
 use crates_io_api::AsyncClient;
 use oss_rust_sdk::object::ObjectAPI;
 use oss_rust_sdk::oss::OSS;
-use reqwest::Client;
 use reqwest::header::HOST;
+use reqwest::Client;
 use rss::Channel;
 use scraper::Html;
 
-use lib_rs_feed_lib::CrateIoApiExt;
 use lib_rs_feed_lib::feed::{generate_channel, generate_entries};
-use lib_rs_feed_lib::parser::{Crate, CrateMeta, extract_content, parse_new, parse_trending};
+use lib_rs_feed_lib::parser::{extract_content, parse_new, parse_trending, Crate, CrateMeta};
+use lib_rs_feed_lib::CrateIoApiExt;
 
 async fn fetch_with_client(
     client: &Client,
@@ -34,7 +34,7 @@ async fn fetch_with_client(
             content: extract_content(&src).unwrap(),
         })
     }))
-        .await?;
+    .await?;
 
     Ok(generate_channel(desc, generate_entries(crates)))
 }
