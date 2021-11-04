@@ -76,7 +76,7 @@ pub fn parse_trending(src: &Html) -> Option<Vec<CrateMeta>> {
 }
 
 pub fn extract_content(src: &Html) -> Option<String> {
-    static README_SELECTOR: Lazy<Selector> = Lazy::new(|| Selector::parse("#readme-deps").unwrap());
+    static README_SELECTOR: Lazy<Selector> = Lazy::new(|| Selector::parse("#readme").unwrap());
 
     src.select(&README_SELECTOR).next().map(|item| item.html())
 }
