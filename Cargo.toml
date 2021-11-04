@@ -1,0 +1,27 @@
+[package]
+name = "lib-rs-feed"
+version = "0.1.0"
+edition = "2021"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "lib-rs-feed"
+path = "src/main.rs"
+
+[lib]
+name = "lib_rs_feed_lib"
+path = "src/lib/lib.rs"
+
+[dependencies]
+anyhow = "1.0"
+chrono = "0.4"
+cow-utils = "0.1"
+crates_io_api = "0.7"
+futures = "0.3"
+itertools = "0.10"
+once_cell = "1.8"
+oss-rust-sdk = "0.2"
+reqwest = "0.11"
+rss = "2.0"
+scraper = "0.12"
+tokio = { version = "1.13", features = ["rt", "rt-multi-thread", "macros", "parking_lot"] }
