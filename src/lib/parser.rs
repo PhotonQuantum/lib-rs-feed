@@ -53,7 +53,7 @@ fn parse_elem(elem: ElementRef) -> Option<CrateMeta> {
         version: elem
             .select(&VERSION_SELECTOR)
             .next()
-            .and_then(|elem| Some(elem.children().nth(1)?.value().as_text()?.deref())),
+            .and_then(|elem| Some(&**elem.children().nth(1)?.value().as_text()?)),
         pubdate: elem
             .select(&PUBDATE_SELECTOR)
             .next()
