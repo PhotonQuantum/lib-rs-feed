@@ -1,5 +1,4 @@
 use std::borrow::Cow;
-use std::ops::Deref;
 
 use chrono::{DateTime, FixedOffset};
 use cow_utils::CowUtils;
