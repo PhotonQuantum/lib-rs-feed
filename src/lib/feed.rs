@@ -30,7 +30,7 @@ pub fn generate_entries(crates: Vec<Crate>) -> Vec<Item> {
             let hash = generate_uuid(&crate_);
             let guid = {
                 let mut guid = Guid::default();
-                guid.set_value(format!("urn:uuid:{}", hash));
+                guid.set_value(hash.as_urn().to_string());
                 guid.set_permalink(false);
                 guid
             };
