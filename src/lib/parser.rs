@@ -44,11 +44,9 @@ fn parse_elem(elem: ElementRef) -> Option<CrateMeta> {
         title: elem.select(&TITLE_SELECTOR).next()?.text().next()?,
         description: elem
             .select(&DESC_SELECTOR)
-            .next()?
-            .text()
-            .next()?
-            .trim()
-            .cow_replace('\n', " "),
+            .next()
+            .and_then(|e| Some(e.text().next()?.cow_replace('\n', " ")))
+            .unwrap_or_default(),
         version: elem
             .select(&VERSION_SELECTOR)
             .next()
