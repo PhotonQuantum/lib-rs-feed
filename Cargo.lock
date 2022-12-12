@@ -959,9 +959,9 @@ dependencies = [
 
 [[package]]
 name = "oss-rust-sdk"
-version = "0.5.0"
+version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c34eee068a43232e4b503b81829f067f9f12a3df1e9bd808e26cc05945d96539"
+checksum = "24b457bcf7bb4b31a098c70f2ea83aace64937181ba6e88f9564bc4d05b655d5"
 dependencies = [
  "async-trait",
  "base64",
