@@ -38,7 +38,7 @@ dependencies = [
  "derive_builder",
  "diligent-date-parser",
  "never",
- "quick-xml 0.27.1",
+ "quick-xml",
 ]
 
 [[package]]
@@ -965,9 +965,9 @@ dependencies = [
 
 [[package]]
 name = "oss-rust-sdk"
-version = "0.6.1"
+version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "24b457bcf7bb4b31a098c70f2ea83aace64937181ba6e88f9564bc4d05b655d5"
+checksum = "615c2e567db38ff87e9990a54826612e1b03d7fc6ce70477a333efd1308856cb"
 dependencies = [
  "async-trait",
  "base64 0.13.0",
@@ -977,7 +977,7 @@ dependencies = [
  "hmac",
  "httpdate",
  "log",
- "quick-xml 0.18.1",
+ "quick-xml",
  "reqwest",
  "sha1",
 ]
@@ -1161,15 +1161,6 @@ dependencies = [
 
 [[package]]
 name = "quick-xml"
-version = "0.18.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3cc440ee4802a86e357165021e3e255a9143724da31db1e2ea540214c96a0f82"
-dependencies = [
- "memchr",
-]
-
-[[package]]
-name = "quick-xml"
 version = "0.27.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ffc053f057dd768a56f62cd7e434c42c831d296968997e9ac1f76ea7c2d14c41"
@@ -1342,7 +1333,7 @@ dependencies = [
  "atom_syndication",
  "derive_builder",
  "never",
- "quick-xml 0.27.1",
+ "quick-xml",
 ]
 
 [[package]]
