@@ -188,13 +188,13 @@ dependencies = [
 
 [[package]]
 name = "crates_io_api"
-version = "0.9.0"
+version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cb0122a67287f6795360b83a542cf2fbb3eb57a42729966c9ac792598c909902"
+checksum = "200ad30d24892baf2168f2df366939264d02f2fa0be0914f8e2da4bd3407c58c"
 dependencies = [
  "chrono",
  "futures",
- "reqwest 0.11.27",
+ "reqwest 0.12.3",
  "serde",
  "serde_derive",
  "serde_json",
@@ -1481,6 +1481,7 @@ dependencies = [
  "base64 0.22.0",
  "bytes",
  "encoding_rs",
+ "futures-channel",
  "futures-core",
  "futures-util",
  "h2 0.4.3",
