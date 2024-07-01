@@ -25,4 +25,4 @@ reqwest = "0.12"
 rss = "2.0"
 scraper = "0.19"
 tokio = { version = "1.38", features = ["rt", "rt-multi-thread", "macros", "parking_lot"] }
-uuid = { version = "1.8.0", features=["v5"] }
+uuid = { version = "1.9.1", features=["v5"] }
